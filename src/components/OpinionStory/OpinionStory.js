@@ -1,5 +1,6 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
@@ -25,6 +26,13 @@ const Avatar = styled.img`
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
+  margin-left: 1rem;
+  float: right;
+
+  @media ${QUERIES.tabletOnly} {
+    margin-left: rever;
+    float: revert;
+  }
 `;
 
 const AuthorName = styled.p`
